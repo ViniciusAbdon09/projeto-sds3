@@ -10,7 +10,18 @@ const DonutChart = () => {
     legend: {
       show: true,
     },
-  };
+    plotOptions: {
+      pie: {
+        donut: {
+          labels: {
+            show: true,
+            name: 'Total',
+            value: '500'
+          }
+        }
+      }
+    }
+  }
   return (
     <Chart
       options={{ ...options, labels: mockData.labels }}
